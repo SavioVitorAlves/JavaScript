@@ -142,13 +142,12 @@ const calcFatorial = () => {
     resultado *= i;
   }
 
-  display.textContent = resultado.toString(); // Exibe o resultado no display
+  display.textContent = resultado.toString();
   ajustaPontoVirgula();
   numeroAnterior = '0';
   primeiro = true;
 };
 
-// Adiciona o evento para calcular o fatorial quando o botão '!' é clicado
 divisaoUm.addEventListener('click', calcFatorial);
 
 
