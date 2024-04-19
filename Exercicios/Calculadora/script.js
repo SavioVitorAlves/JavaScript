@@ -134,15 +134,25 @@ const calcPorc = () => {
 
 porc.addEventListener('click', calcPorc)
 
-const calcDivisaoUm = () => {
-  display.textContent = 1 / parseFloat(display.textContent.replace(',', '.')) 
-  ajustaPontoVirgula()
-  numeroAtual = display.textContent
-  numeroAnterior = '0'
-  primeiro = true
-}
+const calcFatorial = () => {
+  let numero = parseInt(display.textContent.replace(',', '.')); // Pega o número do display
+  if (isNaN(numero)) return; // Verifica se é um número válido
 
-divisaoUm.addEventListener('click', calcDivisaoUm)
+  // Calcula o fatorial
+  let resultado = 1;
+  for (let i = 1; i <= numero; i++) {
+    resultado *= i;
+  }
+
+  display.textContent = resultado.toString(); // Exibe o resultado no display
+  ajustaPontoVirgula();
+  numeroAnterior = '0';
+  primeiro = true;
+};
+
+// Adiciona o evento para calcular o fatorial quando o botão '!' é clicado
+divisaoUm.addEventListener('click', calcFatorial);
+
 
 const calcPotencia = () => {
   display.textContent = Math.pow(parseFloat(display.textContent.replace(',', '.')), 2)
