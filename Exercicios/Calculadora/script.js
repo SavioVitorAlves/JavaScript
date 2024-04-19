@@ -135,10 +135,8 @@ const calcPorc = () => {
 porc.addEventListener('click', calcPorc)
 
 const calcFatorial = () => {
-  let numero = parseInt(display.textContent.replace(',', '.')); // Pega o número do display
-  if (isNaN(numero)) return; // Verifica se é um número válido
-
-  // Calcula o fatorial
+  let numero = parseInt(display.textContent.replace(',', '.'));
+  if (isNaN(numero)) return;
   let resultado = 1;
   for (let i = 1; i <= numero; i++) {
     resultado *= i;
